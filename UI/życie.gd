@@ -17,6 +17,7 @@ func _process(delta: float):
 	progress_bar.value = zycie
 
 func Obrazenia(x):
+	print(zycie)
 	zycie = zycie - x
 	
 func Leczenie(x):

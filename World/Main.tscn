@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=4 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
+[ext_resource type="PackedScene" uid="uid://cfv8p4jgeag2w" path="res://Player/KOLCE.tscn" id="3_1ryw4"]
 
 [node name="Main" type="Node2D"]
 
@@ -11,3 +12,6 @@ position = Vector2(-776, -516)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Życie" parent="CanvasLayer" instance=ExtResource("2_b4c0u")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_1ryw4")]
+position = Vector2(-748, -229)
