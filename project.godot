@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Nowy projekt gry"
+config/name="Magiczne rączki"
+run/main_scene="res://Player/Player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Art/icon.svg"
 
@@ -21,6 +22,21 @@ folder_colors={
 "res://Player/": "red",
 "res://Tile_Map/": "green",
 "res://World/": "blue"
+}
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": []
+}
+move_right={
+"deadzone": 0.5,
+"events": []
+}
+jump={
+"deadzone": 0.5,
+"events": []
 }
 
 [rendering]
