@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://emketib000p4"]
+
+[ext_resource type="Script" path="res://UI/życie.gd" id="1_ytw88"]
+
+[node name="Życie" type="Control" node_paths=PackedStringArray("progress_bar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ytw88")
+progress_bar = NodePath("ProgressBar")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = 266.0
+offset_top = 594.0
+offset_right = 867.0
+offset_bottom = 650.0
