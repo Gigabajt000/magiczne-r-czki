@@ -14,6 +14,7 @@ progress_bar = NodePath("ProgressBar")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 modulate = Color(1, 0, 0, 1)
+layout_mode = 0
 offset_left = 266.0
 offset_top = 594.0
 offset_right = 867.0
