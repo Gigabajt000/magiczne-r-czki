@@ -1,14 +1,13 @@
 extends CharacterBody2D
 
+class_name Player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+
+var SPEED = 300.0
+var JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
-	
-	
-
 	
 
 	# Get the input direction and handle the movement/deceleration.
