@@ -13,7 +13,6 @@ var max_sprint : float
 
 func _process(delta: float) -> void:
 		Sprinting()
-		print(player.SPEED)
 
 func _ready() -> void:
 	sprint_value = 100
@@ -25,15 +24,14 @@ func _physics_process(delta: float) -> void:
 
 
 func Sprinting():
-	if Input.is_action_pressed("sprint") and sprint_value >= 0:
+	if Input.is_action_pressed("sprint"):
 		is_sprinting = true
 	elif not Input.is_action_pressed("sprint"):
 		is_sprinting = false
-		
+
 	if is_sprinting == true:
-		player.SPEED *= 1.5
-		sprint_value = move_toward(sprint_value,0,1)
-	
-	else:
 		pass
-	
+		#Globa.speed *= 1.5
+	elif is_sprinting == false:
+		pass
+		#Globa.speed /= 1.5
