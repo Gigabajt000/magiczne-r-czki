@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=9 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://orcbkoyc14vj" path="res://Tile_Map/Tile_Map_Swiat.tscn" id="4_w4ma6"]
 [ext_resource type="PackedScene" uid="uid://gj412ww027pa" path="res://Enemy/enemy.tscn" id="6_vt8o6"]
 [ext_resource type="PackedScene" uid="uid://cvaomg8n4bwmc" path="res://Tile_Map/sklepik.tscn" id="7_ycmr2"]
+[ext_resource type="PackedScene" uid="uid://dtbp1ybitey7m" path="res://Tile_Map/powrót_z_sklepu.tscn" id="8_pgsm2"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ajl52")]
-position = Vector2(-4699, -400)
+position = Vector2(-4673, -394)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -34,3 +35,17 @@ target = NodePath("../Player")
 
 [node name="Sklepik" parent="." instance=ExtResource("7_ycmr2")]
 position = Vector2(-4677, -389)
+
+[node name="Powrót_Z_Sklepu" parent="Sklepik" node_paths=PackedStringArray("player") instance=ExtResource("8_pgsm2")]
+position = Vector2(239, 117)
+player = NodePath("../../Player")
+x = -3100
+y = -570
+napis = "Powrót"
+
+[node name="Powrót" parent="Sklepik" node_paths=PackedStringArray("player") instance=ExtResource("8_pgsm2")]
+position = Vector2(1337, -284)
+player = NodePath("../../Player")
+x = -4700
+y = -400
+napis = "Sklep"
