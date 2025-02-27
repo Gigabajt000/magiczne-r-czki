@@ -12,7 +12,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ajl52")]
-position = Vector2(-4673, -394)
+position = Vector2(-3106, -562)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

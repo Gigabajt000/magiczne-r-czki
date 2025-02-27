@@ -4,7 +4,15 @@ var time:float
 
 @export var sprite : Sprite2D
 
+@export var label: Label
+
 func _process(delta: float) -> void:
+	if time < 15:
+		var x :int = 15 - time
+		label.text = str(x)
+	else:
+		label.text = ""
+
 	if time <= 15:
 		time = time + delta
 		

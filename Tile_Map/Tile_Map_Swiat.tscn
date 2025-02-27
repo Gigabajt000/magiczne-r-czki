@@ -216,7 +216,7 @@ position = Vector2(626, 340)
 position = Vector2(1216, 53)
 
 [node name="Życie_Collectable" parent="." instance=ExtResource("4_gfvyo")]
-position = Vector2(1279, 373)
+position = Vector2(1278, 371)
 
 [node name="Życie_Collectable2" parent="." instance=ExtResource("4_gfvyo")]
-position = Vector2(-274, 728)
+position = Vector2(-273, 723)
