@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
-[ext_resource type="PackedScene" uid="uid://cfv8p4jgeag2w" path="res://Player/KOLCE.tscn" id="3_1ryw4"]
 [ext_resource type="PackedScene" uid="uid://bkmv8tjnv5cjb" path="res://World/control.tscn" id="4_k802r"]
+[ext_resource type="PackedScene" uid="uid://orcbkoyc14vj" path="res://Tile_Map/Tile_Map_Swiat.tscn" id="4_w4ma6"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ajl52")]
-position = Vector2(-776, -516)
+position = Vector2(-3103, -590)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -20,5 +20,5 @@ offset_top = 620.0
 offset_right = 1.0
 offset_bottom = 620.0
 
-[node name="Node2D" parent="." instance=ExtResource("3_1ryw4")]
-position = Vector2(-748, -229)
+[node name="Tilemap" parent="." instance=ExtResource("4_w4ma6")]
+position = Vector2(-3100, -562)

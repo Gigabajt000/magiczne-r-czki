@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://orcbkoyc14vj"]
+[gd_scene load_steps=9 format=4 uid="uid://orcbkoyc14vj"]
 
 [ext_resource type="Texture2D" uid="uid://bg1ygp863ixm2" path="res://Art/z neta/Terrain/Terrain (16x16).png" id="1_qlokj"]
 [ext_resource type="Texture2D" uid="uid://ciu7u11wml136" path="res://Art/z neta/Background/Blue.png" id="2_pk2da"]
 [ext_resource type="PackedScene" uid="uid://cfv8p4jgeag2w" path="res://Player/KOLCE.tscn" id="3_4wyht"]
+[ext_resource type="PackedScene" uid="uid://dwvsb1ntqvheq" path="res://Player/życie_collectable.tscn" id="4_gfvyo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4vo1"]
 texture = ExtResource("1_qlokj")
@@ -87,8 +88,11 @@ texture = ExtResource("1_qlokj")
 9:5/0 = 0
 10:5/0 = 0
 12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:5/0 = 0
 18:5/0 = 0
 19:5/0 = 0
@@ -101,7 +105,9 @@ texture = ExtResource("1_qlokj")
 7:6/0 = 0
 8:6/0 = 0
 13:6/0 = 0
+13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:6/0 = 0
+14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:6/0 = 0
 18:6/0 = 0
 19:6/0 = 0
@@ -155,8 +161,10 @@ texture = ExtResource("1_qlokj")
 20:10/0 = 0
 15:4/size_in_atlas = Vector2i(1, 3)
 15:4/0 = 0
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.0625, -24.0625, 7.9375, -24.1875, 8.04334, 24.4836, -7.86656, 23.9532)
 12:4/size_in_atlas = Vector2i(3, 1)
 12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.9532, 7.68979, -23.9532, -7.86656, 23.9532, -7.86656, 23.9532, 7.86656)
 
 [sub_resource type="TileSet" id="TileSet_i4ibx"]
 physics_layer_0/collision_layer = 1
@@ -206,3 +214,9 @@ position = Vector2(626, 340)
 
 [node name="Node2D4" parent="." instance=ExtResource("3_4wyht")]
 position = Vector2(1216, 53)
+
+[node name="Życie_Collectable" parent="." instance=ExtResource("4_gfvyo")]
+position = Vector2(1279, 373)
+
+[node name="Życie_Collectable2" parent="." instance=ExtResource("4_gfvyo")]
+position = Vector2(-274, 728)

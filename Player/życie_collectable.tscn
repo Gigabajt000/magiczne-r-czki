@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwvsb1ntqvheq"]
+
+[ext_resource type="Script" path="res://Player/życie_collectable.gd" id="1_wp4rk"]
+[ext_resource type="Texture2D" uid="uid://behepbj30kd1y" path="res://Art/z neta/Traps/Fan/Off.png" id="2_ie543"]
+[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="3_dpci1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx4ni"]
+size = Vector2(20, 8)
+
+[node name="Życie_Collectable" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_wp4rk")
+sprite = NodePath("Sprite2D2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ie543")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_nx4ni")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+scale = Vector2(0.125, 0.078125)
+texture = ExtResource("3_dpci1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
