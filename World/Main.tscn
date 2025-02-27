@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=8 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://d0msh6tnl6rxd" path="res://UI/monetki.tscn" id="4_pqvp6"]
 [ext_resource type="PackedScene" uid="uid://orcbkoyc14vj" path="res://Tile_Map/Tile_Map_Swiat.tscn" id="4_w4ma6"]
 [ext_resource type="PackedScene" uid="uid://gj412ww027pa" path="res://Enemy/enemy.tscn" id="6_vt8o6"]
+[ext_resource type="PackedScene" uid="uid://cvaomg8n4bwmc" path="res://Tile_Map/sklepik.tscn" id="7_ycmr2"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ajl52")]
-position = Vector2(-3103, -590)
+position = Vector2(-4699, -400)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -30,3 +31,6 @@ position = Vector2(-3100, -562)
 [node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_vt8o6")]
 position = Vector2(-2856, -70)
 target = NodePath("../Player")
+
+[node name="Sklepik" parent="." instance=ExtResource("7_ycmr2")]
+position = Vector2(-4677, -389)

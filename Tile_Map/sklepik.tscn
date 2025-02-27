@@ -204,5 +204,15 @@ tile_set = SubResource("TileSet_8uvh5")
 
 [node name="Kupno_Życie" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-237, -111)
-wartosc = 10
-cena = 2
+wartosc = 20
+cena = 10
+
+[node name="Kupno_Życie2" parent="." instance=ExtResource("3_f5jkh")]
+position = Vector2(-195, -111)
+wartosc = 50
+cena = 15
+
+[node name="Kupno_Życie3" parent="." instance=ExtResource("3_f5jkh")]
+position = Vector2(-153, -111)
+wartosc = 100
+cena = 20
