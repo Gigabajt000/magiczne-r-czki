@@ -28,5 +28,4 @@ offset_bottom = 620.0
 position = Vector2(-3100, -562)
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_vt8o6")]
-position = Vector2(-2856, -70)
 target = NodePath("../Player")
