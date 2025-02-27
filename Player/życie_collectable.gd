@@ -22,6 +22,6 @@ func _process(delta: float) -> void:
 		sprite.visible = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if time >= 15:
+	if time >= 15 and Global.życie < Global.max_życie:
 		time = 0
 		Global.Obrażenia(-30)
