@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://cvaomg8n4bwmc"]
+[gd_scene load_steps=12 format=4 uid="uid://cvaomg8n4bwmc"]
 
 [ext_resource type="Texture2D" uid="uid://ciu7u11wml136" path="res://Art/z neta/Background/Blue.png" id="1_1nnoc"]
 [ext_resource type="Texture2D" uid="uid://bg1ygp863ixm2" path="res://Art/z neta/Terrain/Terrain (16x16).png" id="2_timy1"]
 [ext_resource type="PackedScene" uid="uid://cre58fwa4bva8" path="res://Tile_Map/kupno_życie.tscn" id="3_f5jkh"]
+[ext_resource type="PackedScene" uid="uid://dxij5wj8hmgpr" path="res://Tile_Map/maks_życie.tscn" id="4_en4u1"]
+[ext_resource type="PackedScene" uid="uid://brqiv8a1hhsif" path="res://Tile_Map/tarcza.tscn" id="5_yvihk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hyfkt"]
 texture = ExtResource("1_1nnoc")
@@ -191,6 +193,14 @@ texture = ExtResource("2_timy1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ydqxd")
 
+[sub_resource type="LabelSettings" id="LabelSettings_bxqxb"]
+font_size = 21
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bmdx3"]
+font_size = 21
+font_color = Color(0, 0, 1, 1)
+
 [node name="Sklepik" type="Node2D"]
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -199,20 +209,58 @@ tile_set = SubResource("TileSet_qc8ao")
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 z_index = 1
-tile_map_data = PackedByteArray("AADx/wgAAAAMAAQAAAD0/wgAAAAMAAQAAAD3/wgAAAAMAAQAAAD6/wgAAAAMAAQAAAD9/wgAAAAMAAQAAAAAAAgAAAAMAAQAAAADAAgAAAAMAAQAAADx//f/AAAMAAQAAAD0//f/AAAMAAQAAAD3//f/AAAMAAQAAAD6//f/AAAMAAQAAAD9//f/AAAMAAQAAAAAAPf/AAAMAAQAAAADAPf/AAAMAAQAAAAGAPf/AAAMAAQAAAAJAPf/AAAMAAQAAAAMAPf/AAAMAAQAAAAPAPf/AAAMAAQAAAAQAPn/AAAPAAQAAAAQAPz/AAAPAAQAAAAQAP//AAAPAAQAAAAQAAIAAAAPAAQAAAAQAAUAAAAPAAQAAADv//j/AAAPAAQAAADv//v/AAAPAAQAAADv//7/AAAPAAQAAADv/wEAAAAPAAQAAADv/wQAAAAPAAQAAADv/wcAAAAPAAQAAAAGAAgAAAAMAAQAAAAJAAgAAAAMAAQAAAAMAAgAAAAMAAQAAAAPAAgAAAAMAAQAAAAQAAcAAAAMAAUAAAD4//n/AAAPAAQAAAA=")
+tile_map_data = PackedByteArray("AADx/wgAAAAMAAQAAAD0/wgAAAAMAAQAAAD3/wgAAAAMAAQAAAD6/wgAAAAMAAQAAAD9/wgAAAAMAAQAAAAAAAgAAAAMAAQAAAADAAgAAAAMAAQAAADx//f/AAAMAAQAAAD0//f/AAAMAAQAAAD3//f/AAAMAAQAAAD6//f/AAAMAAQAAAD9//f/AAAMAAQAAAAAAPf/AAAMAAQAAAADAPf/AAAMAAQAAAAGAPf/AAAMAAQAAAAJAPf/AAAMAAQAAAAMAPf/AAAMAAQAAAAPAPf/AAAMAAQAAAAQAPn/AAAPAAQAAAAQAPz/AAAPAAQAAAAQAP//AAAPAAQAAAAQAAIAAAAPAAQAAAAQAAUAAAAPAAQAAADv//j/AAAPAAQAAADv//v/AAAPAAQAAADv//7/AAAPAAQAAADv/wEAAAAPAAQAAADv/wQAAAAPAAQAAADv/wcAAAAPAAQAAAAGAAgAAAAMAAQAAAAJAAgAAAAMAAQAAAAMAAgAAAAMAAQAAAAPAAgAAAAMAAQAAAAQAAcAAAAMAAUAAAD4//n/AAAPAAQAAAD+//n/AAAPAAQAAAAEAPn/AAAPAAQAAAA=")
 tile_set = SubResource("TileSet_8uvh5")
 
 [node name="Kupno_Życie" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-237, -111)
-wartosc = 20
+wartosc = "50"
 cena = 10
 
 [node name="Kupno_Życie2" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-195, -111)
-wartosc = 50
+wartosc = "50"
 cena = 15
 
 [node name="Kupno_Życie3" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-153, -111)
-wartosc = 100
+wartosc = "all"
 cena = 20
+
+[node name="maks_Życie" parent="." instance=ExtResource("4_en4u1")]
+position = Vector2(-72, -109)
+"wartość" = 50
+cena = 50
+
+[node name="tarcza" parent="." instance=ExtResource("5_yvihk")]
+position = Vector2(23, -109)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -218.0
+offset_top = -94.0
+offset_right = -166.0
+offset_bottom = -64.0
+text = "Życie"
+label_settings = SubResource("LabelSettings_bxqxb")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -96.0
+offset_top = -94.0
+offset_right = -44.0
+offset_bottom = -64.0
+text = "Max
+Życie"
+label_settings = SubResource("LabelSettings_bxqxb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -8.0
+offset_top = -94.0
+offset_right = 58.0
+offset_bottom = -31.0
+text = "Max
+Tarcza"
+label_settings = SubResource("LabelSettings_bmdx3")
+horizontal_alignment = 1
+vertical_alignment = 1

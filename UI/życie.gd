@@ -10,7 +10,7 @@ func _ready():
 	progress_bar.max_value = Global.max_życie
 
 func _process(delta: float):
-
+	progress_bar.max_value = Global.max_życie
 	progress_bar.value = Global.życie
 	if Global.życie >= 100:
 		Global.życie = 100

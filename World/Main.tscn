@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=10 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
 [ext_resource type="PackedScene" uid="uid://bkmv8tjnv5cjb" path="res://World/control.tscn" id="4_k802r"]
 [ext_resource type="PackedScene" uid="uid://d0msh6tnl6rxd" path="res://UI/monetki.tscn" id="4_pqvp6"]
 [ext_resource type="PackedScene" uid="uid://orcbkoyc14vj" path="res://Tile_Map/Tile_Map_Swiat.tscn" id="4_w4ma6"]
+[ext_resource type="PackedScene" uid="uid://8wlcrippp6yw" path="res://UI/tarcza.tscn" id="5_b5uy7"]
 [ext_resource type="PackedScene" uid="uid://gj412ww027pa" path="res://Enemy/enemy.tscn" id="6_vt8o6"]
 [ext_resource type="PackedScene" uid="uid://cvaomg8n4bwmc" path="res://Tile_Map/sklepik.tscn" id="7_ycmr2"]
 [ext_resource type="PackedScene" uid="uid://dtbp1ybitey7m" path="res://Tile_Map/powrót_z_sklepu.tscn" id="8_pgsm2"]
@@ -25,6 +26,8 @@ offset_right = 1.0
 offset_bottom = 620.0
 
 [node name="Monetki" parent="CanvasLayer" instance=ExtResource("4_pqvp6")]
+
+[node name="Tarcza" parent="CanvasLayer" instance=ExtResource("5_b5uy7")]
 
 [node name="Tilemap" parent="." instance=ExtResource("4_w4ma6")]
 position = Vector2(-3100, -562)

@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://brqiv8a1hhsif"]
+
+[ext_resource type="Script" path="res://Tile_Map/tarcza.gd" id="1_ympkc"]
+[ext_resource type="Texture2D" uid="uid://behepbj30kd1y" path="res://Art/z neta/Traps/Fan/Off.png" id="2_d5uk7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab1je"]
+size = Vector2(20, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e2elk"]
+font_size = 7
+font_color = Color(0, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhy34"]
+font_size = 8
+font_color = Color(1, 1, 0, 1)
+outline_color = Color(1, 1, 0, 1)
+
+[node name="tarcza" type="StaticBody2D" node_paths=PackedStringArray("label_wartość", "label_cena")]
+script = ExtResource("1_ympkc")
+"label_wartość" = NodePath("Label")
+label_cena = NodePath("Label2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d5uk7")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("RectangleShape2D_ab1je")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -4.0
+offset_top = -13.0
+offset_right = 4.0
+offset_bottom = -2.0
+grow_horizontal = 2
+text = "10"
+label_settings = SubResource("LabelSettings_e2elk")
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 14.0
+grow_horizontal = 2
+text = "2"
+label_settings = SubResource("LabelSettings_xhy34")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
