@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0msh6tnl6rxd"]
+
+[ext_resource type="Script" path="res://UI/monetki.gd" id="1_vtltj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bh54p"]
+font_size = 28
+
+[node name="Monetki" type="Control" node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vtltj")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+offset_left = 22.0
+offset_right = 32.0
+offset_bottom = 23.0
+text = "1"
+label_settings = SubResource("LabelSettings_bh54p")

@@ -14,3 +14,5 @@ func _process(delta: float):
 	progress_bar.value = Global.życie
 	if Global.życie >= 100:
 		Global.życie = 100
+	if Global.życie <= 0:
+		Global.życie = 0
