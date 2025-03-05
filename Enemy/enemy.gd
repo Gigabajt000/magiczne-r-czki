@@ -3,6 +3,9 @@ extends CharacterBody2D
 var SPEED = 80
 @export var target: CharacterBody2D
 
+func Enemy():
+	pass
+
 func _physics_process(delta: float) -> void:
 	
 	position.x = move_toward(position.x, target.position.x, SPEED * delta)

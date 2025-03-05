@@ -6,6 +6,9 @@ class_name Player
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 
+func Player():
+	pass
+
 func _process(delta: float) -> void:
 	Global.speed = SPEED
 

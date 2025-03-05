@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4v3y4ws0lwqi"]
+
+[ext_resource type="Script" path="res://Broń.gd" id="1_dk0wf"]
+[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="2_he2n5"]
+
+[node name="Broń" type="Node2D"]
+script = ExtResource("1_dk0wf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15.25, 1)
+scale = Vector2(1.02734, 0.234375)
+texture = ExtResource("2_he2n5")
+
+[node name="miejsce spawnu pocisku" type="Node2D" parent="."]
+position = Vector2(83, 0)
