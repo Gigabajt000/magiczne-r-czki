@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://gj412ww027pa"]
+[gd_scene load_steps=6 format=3 uid="uid://gj412ww027pa"]
 
 [ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="1_f5l6u"]
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_i8jwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s6i3y"]
 radius = 13.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voetl"]
+size = Vector2(30, 30)
+
+[sub_resource type="Curve" id="Curve_weqns"]
+_data = [Vector2(0.011236, 1), 0.0, 0.0, 0, 0, Vector2(0.977528, 0.274725), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("navigation")]
 motion_mode = 1
@@ -21,5 +28,27 @@ texture = ExtResource("1_f5l6u")
 shape = SubResource("CircleShape2D_s6i3y")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-debug_enabled = true
 debug_path_custom_color = Color(0, 1, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_voetl")
+
+[node name="CPUParticles2D_Atak" type="CPUParticles2D" parent="."]
+z_index = 2
+emitting = false
+amount = 60
+lifetime = 0.2
+one_shot = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 70.71
+initial_velocity_max = 131.32
+scale_amount_min = 3.0
+scale_amount_max = 7.0
+scale_amount_curve = SubResource("Curve_weqns")
+color = Color(0.976471, 0, 0, 1)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -21,6 +21,7 @@ script = ExtResource("1_5bqoc")
 label_cena = NodePath("Label2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_ntaij")
 
 [node name="Area2D" type="Area2D" parent="Sprite2D"]
@@ -29,6 +30,7 @@ texture = ExtResource("1_ntaij")
 shape = SubResource("RectangleShape2D_8kjbu")
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -41,6 +43,7 @@ text = "10"
 label_settings = SubResource("LabelSettings_bufnn")
 
 [node name="Label2" type="Label" parent="."]
+texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

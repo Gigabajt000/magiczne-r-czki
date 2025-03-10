@@ -17,6 +17,7 @@ sprite = NodePath("Sprite2D2")
 label = NodePath("Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2_ie543")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -30,6 +31,7 @@ scale = Vector2(0.125, 0.078125)
 texture = ExtResource("3_dpci1")
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

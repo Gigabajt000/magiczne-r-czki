@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
-[ext_resource type="PackedScene" uid="uid://bkmv8tjnv5cjb" path="res://World/control.tscn" id="4_k802r"]
+[ext_resource type="PackedScene" uid="uid://bkmv8tjnv5cjb" path="res://UI/control.tscn" id="4_k802r"]
 [ext_resource type="PackedScene" uid="uid://d0msh6tnl6rxd" path="res://UI/monetki.tscn" id="4_pqvp6"]
 [ext_resource type="PackedScene" uid="uid://orcbkoyc14vj" path="res://Tile_Map/Tile_Map_Swiat.tscn" id="4_w4ma6"]
 [ext_resource type="PackedScene" uid="uid://8wlcrippp6yw" path="res://UI/tarcza.tscn" id="5_b5uy7"]
@@ -20,10 +20,6 @@ position = Vector2(-3106, -562)
 [node name="Życie" parent="CanvasLayer" instance=ExtResource("2_b4c0u")]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("4_k802r")]
-offset_left = 1.0
-offset_top = 620.0
-offset_right = 1.0
-offset_bottom = 620.0
 
 [node name="Monetki" parent="CanvasLayer" instance=ExtResource("4_pqvp6")]
 
