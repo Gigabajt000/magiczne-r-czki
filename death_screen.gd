@@ -17,5 +17,6 @@ func _on_retry_pressed():
 	Global.Is_Alive = true
 	Global.Is_Round_Playing = false
 	Global.Round_Time = 60
-	Global.Round = 0
+	Global.Round = 1
+	Global.money = 0
 	get_tree().reload_current_scene()

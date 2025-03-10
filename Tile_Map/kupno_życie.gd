@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if wartosc != "all" and Global.money >= cena and Global.życie < Global.max_życie:
-		Global.Obrażenia(-int(wartosc))
+		Global.Leczenie(int(wartosc))
 		Global.money -= cena
 	if wartosc == "all" and Global.money >= cena and Global.życie < Global.max_życie:
-		Global.Obrażenia(-(Global.max_życie))
+		Global.Leczenie((Global.max_życie))
 		Global.money -= cena

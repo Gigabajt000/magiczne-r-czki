@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 50
+var SPEED = 100
 @export var target: CharacterBody2D
 @export var navigation: NavigationAgent2D
 
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	if can_attack == true:
 		Atak(delta)
 	
-	if timer >= 0.5:
+	if timer >= 3:
 		Pathifinding()
 	
 	var dir = to_local(navigation.get_next_path_position()).normalized()

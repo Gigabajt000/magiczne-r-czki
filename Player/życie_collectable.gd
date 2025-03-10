@@ -24,4 +24,4 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if time >= 15 and Global.życie < Global.max_życie and Global.Is_Round_Playing == true:
 		time = 0
-		Global.Obrażenia(-30)
+		Global.Leczenie(30)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=14 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="Script" path="res://World/main.gd" id="1_v1xrh"]
@@ -11,10 +11,19 @@
 [ext_resource type="PackedScene" uid="uid://cvaomg8n4bwmc" path="res://Tile_Map/sklepik.tscn" id="7_ycmr2"]
 [ext_resource type="PackedScene" uid="uid://dtbp1ybitey7m" path="res://Tile_Map/powrót_z_sklepu.tscn" id="8_pgsm2"]
 [ext_resource type="PackedScene" uid="uid://bkoide0alof7k" path="res://UI/death_screen.tscn" id="8_skmhe"]
-[ext_resource type="Script" path="res://World/spawn_przeciwników.gd" id="12_gnvnc"]
+[ext_resource type="PackedScene" uid="uid://dr2c7au5h4oxa" path="res://Enemy/spawner.tscn" id="12_dgxum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sksv0"]
+size = Vector2(1999, 1018)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_v1xrh")
+
+[node name="Zabijacz Przeciwników" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zabijacz Przeciwników"]
+position = Vector2(-2477.5, -244)
+shape = SubResource("RectangleShape2D_sksv0")
 
 [node name="Player" parent="." instance=ExtResource("1_ajl52")]
 position = Vector2(-3106, -562)
@@ -58,8 +67,28 @@ x = -4700
 y = -400
 napis = "Sklep"
 
-[node name="Spawn_Przeciwników" type="Area2D" parent="."]
-script = ExtResource("12_gnvnc")
+[node name="Node_Spawner" type="Node2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spawn_Przeciwników"]
-polygon = PackedVector2Array(-3321, -670, -2866, -672, -2859, -272, -2980, -269, -2996, -448, -3328, -455)
+[node name="Spawner" parent="Node_Spawner" node_paths=PackedStringArray("player") instance=ExtResource("12_dgxum")]
+position = Vector2(-3097, -629)
+player = NodePath("../../Player")
+
+[node name="Spawner2" parent="Node_Spawner" node_paths=PackedStringArray("player") instance=ExtResource("12_dgxum")]
+position = Vector2(-3359, 49)
+player = NodePath("../../Player")
+
+[node name="Spawner3" parent="Node_Spawner" node_paths=PackedStringArray("player") instance=ExtResource("12_dgxum")]
+position = Vector2(-3079, 153)
+player = NodePath("../../Player")
+
+[node name="Spawner4" parent="Node_Spawner" node_paths=PackedStringArray("player") instance=ExtResource("12_dgxum")]
+position = Vector2(-2336, -526)
+player = NodePath("../../Player")
+
+[node name="Spawner5" parent="Node_Spawner" node_paths=PackedStringArray("player") instance=ExtResource("12_dgxum")]
+position = Vector2(-2310, -139)
+player = NodePath("../../Player")
+
+[node name="Spawner6" parent="Node_Spawner" node_paths=PackedStringArray("player") instance=ExtResource("12_dgxum")]
+position = Vector2(-1845, -318)
+player = NodePath("../../Player")
