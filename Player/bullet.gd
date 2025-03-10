@@ -22,5 +22,5 @@ func _on_timer_timeout() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("Enemy"):
-		Global.money += randi_range(0,2)
-		body.queue_free()
+		
+		body.Obrażenia(obrażenia)

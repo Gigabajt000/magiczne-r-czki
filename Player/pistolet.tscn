@@ -10,7 +10,7 @@ script = ExtResource("2_0nx0r")
 "czas_przeładowania" = 1.0
 magazynek = 18
 "ilość_naboji_na_pocisk" = 1
-speed = 600
+speed = 800
 
 [node name="Pistolet" type="Node2D"]
 z_index = 1

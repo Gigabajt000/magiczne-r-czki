@@ -10,7 +10,7 @@ script = ExtResource("2_hcgx4")
 "czas_przeładowania" = 0.1
 magazynek = 35
 "ilość_naboji_na_pocisk" = 1
-speed = 1500
+speed = 1200
 
 [node name="pistolet_maszynowy" type="Node2D"]
 z_index = 1

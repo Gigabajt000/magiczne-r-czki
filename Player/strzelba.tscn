@@ -7,10 +7,10 @@
 [sub_resource type="Resource" id="Resource_i5gmg"]
 script = ExtResource("2_p54pk")
 "obrażenia" = 20
-"czas_przeładowania" = 2.0
+"czas_przeładowania" = 1.5
 magazynek = 25
 "ilość_naboji_na_pocisk" = 5
-speed = 400
+speed = 600
 
 [node name="Strzelba" type="Node2D"]
 z_index = 1

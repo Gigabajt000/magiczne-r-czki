@@ -17,7 +17,7 @@ func _process(delta):
 	if x <= 0:
 		Losowanie()
 		var enemy = enemy_path.instantiate()
-		enemy.position = position
+		enemy.position = global_position
 		enemy.target = player
 		get_parent().add_child(enemy)
 	

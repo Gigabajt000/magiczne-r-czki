@@ -50,5 +50,22 @@ scale_amount_max = 7.0
 scale_amount_curve = SubResource("Curve_weqns")
 color = Color(0.976471, 0, 0, 1)
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(100, 1, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -19.0
+offset_right = 18.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 1.57113
+fill_mode = 3
+show_percentage = false
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

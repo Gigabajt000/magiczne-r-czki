@@ -3,11 +3,11 @@ extends Node
 var broń: String
 var zmiana_broni: bool = false
 
-var życie:int = 80
+var życie:int = 100
 var max_życie:int = 100
 
-var tarcza:int = 50
-var regeneracja_tarczy:int = 50
+var tarcza:int = 0
+var regeneracja_tarczy:int = 0
 
 var stamina:int = 100
 var speed: float

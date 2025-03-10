@@ -19,4 +19,6 @@ func _on_retry_pressed():
 	Global.Round_Time = 60
 	Global.Round = 1
 	Global.money = 0
+	Global.tarcza = 0
+	Global.regeneracja_tarczy = 0
 	get_tree().reload_current_scene()
