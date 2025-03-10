@@ -1,16 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=13 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
+[ext_resource type="Script" path="res://World/main.gd" id="1_v1xrh"]
 [ext_resource type="PackedScene" uid="uid://emketib000p4" path="res://UI/życie.tscn" id="2_b4c0u"]
 [ext_resource type="PackedScene" uid="uid://bkmv8tjnv5cjb" path="res://UI/control.tscn" id="4_k802r"]
 [ext_resource type="PackedScene" uid="uid://d0msh6tnl6rxd" path="res://UI/monetki.tscn" id="4_pqvp6"]
 [ext_resource type="PackedScene" uid="uid://orcbkoyc14vj" path="res://Tile_Map/Tile_Map_Swiat.tscn" id="4_w4ma6"]
 [ext_resource type="PackedScene" uid="uid://8wlcrippp6yw" path="res://UI/tarcza.tscn" id="5_b5uy7"]
 [ext_resource type="PackedScene" uid="uid://gj412ww027pa" path="res://Enemy/enemy.tscn" id="6_vt8o6"]
+[ext_resource type="PackedScene" uid="uid://dscq7l48uxna4" path="res://UI/czas_rundy.tscn" id="7_7oyv0"]
 [ext_resource type="PackedScene" uid="uid://cvaomg8n4bwmc" path="res://Tile_Map/sklepik.tscn" id="7_ycmr2"]
 [ext_resource type="PackedScene" uid="uid://dtbp1ybitey7m" path="res://Tile_Map/powrót_z_sklepu.tscn" id="8_pgsm2"]
+[ext_resource type="PackedScene" uid="uid://bkoide0alof7k" path="res://UI/death_screen.tscn" id="8_skmhe"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_v1xrh")
 
 [node name="Player" parent="." instance=ExtResource("1_ajl52")]
 position = Vector2(-3106, -562)
@@ -22,8 +26,17 @@ position = Vector2(-3106, -562)
 [node name="Control" parent="CanvasLayer" instance=ExtResource("4_k802r")]
 
 [node name="Monetki" parent="CanvasLayer" instance=ExtResource("4_pqvp6")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Tarcza" parent="CanvasLayer" instance=ExtResource("5_b5uy7")]
+
+[node name="Czas Rundy" parent="CanvasLayer" instance=ExtResource("7_7oyv0")]
+
+[node name="Death_Screen" parent="CanvasLayer" instance=ExtResource("8_skmhe")]
 
 [node name="Tilemap" parent="." instance=ExtResource("4_w4ma6")]
 position = Vector2(-3100, -562)

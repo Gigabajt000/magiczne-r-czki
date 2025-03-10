@@ -11,5 +11,6 @@ func _ready():
 	label.text = napis
 
 func _on_area_2d_body_entered(body):
-	player.position.x = x
-	player.position.y = y
+	if Global.Is_Round_Playing == true:
+		player.position.x = x
+		player.position.y = y
