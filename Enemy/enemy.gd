@@ -1,14 +1,24 @@
 extends CharacterBody2D
 
-var SPEED = 80
+var SPEED = 50
 @export var target: CharacterBody2D
+@export var navigation: NavigationAgent2D
 
 func Enemy():
 	pass
 
+var timer: float
+
 func _physics_process(delta: float) -> void:
+	timer += delta
 	
-	position.x = move_toward(position.x, target.position.x, SPEED * delta)
-	position.y = move_toward(position.y, target.position.y, SPEED * delta)
+	if timer >= 0.5:
+		Pathifinding()
 	
+	var dir = to_local(navigation.get_next_path_position()).normalized()
+	velocity = dir * SPEED
 	move_and_slide()
+
+
+func Pathifinding():
+	navigation.target_position = target.global_position

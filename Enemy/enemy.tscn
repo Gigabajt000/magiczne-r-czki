@@ -4,14 +4,22 @@
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_i8jwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s6i3y"]
-radius = 12.0
+radius = 13.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("navigation")]
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_i8jwc")
+navigation = NodePath("NavigationAgent2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.899473, 0.0890735, 0.0746452, 1)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f5l6u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s6i3y")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+debug_path_custom_color = Color(0, 1, 0, 1)
