@@ -3,6 +3,7 @@ extends CharacterBody2D
 var dire
 var pos
 var rot
+var obrażenia
 var speed = 500
 # Called when the node enters thse scene tree for the first time.
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://baixkgkiett76"]
+
+[ext_resource type="Script" path="res://Player/pistolet.gd" id="1_6wicv"]
+[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="1_n4dk1"]
+[ext_resource type="Script" path="res://Player/statystki_broni.gd" id="2_0nx0r"]
+
+[sub_resource type="Resource" id="Resource_pn2xu"]
+script = ExtResource("2_0nx0r")
+"obrażenia" = 10
+"czas_przeładowania" = 1.0
+magazynek = 18
+"ilość_naboji_na_pocisk" = 1
+speed = 600
+
+[node name="Pistolet" type="Node2D"]
+z_index = 1
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_6wicv")
+stats = SubResource("Resource_pn2xu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.75012, 1)
+scale = Vector2(0.894529, 0.234375)
+texture = ExtResource("1_n4dk1")
+
+[node name="miejsce spawnu pocisku" type="Node2D" parent="."]
+position = Vector2(64, 0)

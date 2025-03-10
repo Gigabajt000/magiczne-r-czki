@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://cvaomg8n4bwmc"]
+[gd_scene load_steps=13 format=4 uid="uid://cvaomg8n4bwmc"]
 
 [ext_resource type="Texture2D" uid="uid://ciu7u11wml136" path="res://Art/z neta/Background/Blue.png" id="1_1nnoc"]
 [ext_resource type="Texture2D" uid="uid://bg1ygp863ixm2" path="res://Art/z neta/Terrain/Terrain (16x16).png" id="2_timy1"]
 [ext_resource type="PackedScene" uid="uid://cre58fwa4bva8" path="res://Tile_Map/kupno_życie.tscn" id="3_f5jkh"]
 [ext_resource type="PackedScene" uid="uid://dxij5wj8hmgpr" path="res://Tile_Map/maks_życie.tscn" id="4_en4u1"]
 [ext_resource type="PackedScene" uid="uid://brqiv8a1hhsif" path="res://Tile_Map/tarcza.tscn" id="5_yvihk"]
+[ext_resource type="PackedScene" uid="uid://cbl87m7c3i8xk" path="res://Tile_Map/node_2d.tscn" id="6_6kk08"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hyfkt"]
 texture = ExtResource("1_1nnoc")
@@ -214,18 +215,18 @@ tile_set = SubResource("TileSet_8uvh5")
 
 [node name="Kupno_Życie" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-237, -111)
-wartosc = "50"
+wartosc = "20"
 cena = 10
 
 [node name="Kupno_Życie2" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-195, -111)
 wartosc = "50"
-cena = 15
+cena = 20
 
 [node name="Kupno_Życie3" parent="." instance=ExtResource("3_f5jkh")]
 position = Vector2(-153, -111)
 wartosc = "all"
-cena = 20
+cena = 25
 
 [node name="maks_Życie" parent="." instance=ExtResource("4_en4u1")]
 position = Vector2(-72, -109)
@@ -264,3 +265,18 @@ Tarcza"
 label_settings = SubResource("LabelSettings_bmdx3")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Node2D" parent="." instance=ExtResource("6_6kk08")]
+position = Vector2(112, -111)
+label = "Pistolet"
+weapon = 1
+
+[node name="Node2D2" parent="." instance=ExtResource("6_6kk08")]
+position = Vector2(164, -111)
+label = "Strzelba"
+weapon = 2
+
+[node name="Node2D3" parent="." instance=ExtResource("6_6kk08")]
+position = Vector2(218, -111)
+label = "PM"
+weapon = 3

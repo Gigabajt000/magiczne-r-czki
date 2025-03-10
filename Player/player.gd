@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 class_name Player
 
+@onready var pistolet_path = preload("res://Player/pistolet.tscn")
+@onready var strzelba_path = preload("res://Player/strzelba.tscn")
+@onready var PM_path = preload("res://Player/pistolet_maszynowy.tscn")
 
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
@@ -9,9 +12,35 @@ var JUMP_VELOCITY = -400.0
 func Player():
 	pass
 
+@export var current_weapon: Node2D
+
 func _process(delta: float) -> void:
 	Global.speed = SPEED
-
+	current_weapon.position = position
+	
+	if Global.zmiana_broni == true:
+		
+		Global.zmiana_broni = false
+		current_weapon.queue_free()
+	
+		if Global.broń == "Pistolet":
+			var pistolet = pistolet_path.instantiate()
+			current_weapon = pistolet
+			pistolet.global_position = global_position
+			get_parent().add_child(pistolet)
+			
+		if Global.broń == "Strzelba":
+			var strzelba = strzelba_path.instantiate()
+			current_weapon = strzelba
+			strzelba.global_position = global_position
+			get_parent().add_child(strzelba)
+			
+		if Global.broń == "PM":
+			var PM = PM_path.instantiate()
+			current_weapon = PM
+			PM.global_position = global_position
+			get_parent().add_child(PM)
+			
 func _physics_process(delta: float) -> void:
 	
 

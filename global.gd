@@ -1,7 +1,7 @@
 extends Node
 
-# Broń
-var cooldown: float = 1
+var broń: String
+var zmiana_broni: bool = false
 
 var życie:int = 80
 var max_życie:int = 100
@@ -22,7 +22,7 @@ var Round: int = 1
 var Is_Alive: bool = true
 
 func _physics_process(delta: float) -> void:
-	cooldown = cooldown - delta
+	
 	if Is_Round_Playing == true:
 		Round_Time -= delta
 	if Round_Time <= 0:

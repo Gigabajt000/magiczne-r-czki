@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	if can_attack == true:
 		Atak(delta)
 	
-	if timer >= 3:
+	if timer >= 1.5:
 		Pathifinding()
 	
 	var dir = to_local(navigation.get_next_path_position()).normalized()

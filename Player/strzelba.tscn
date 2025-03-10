@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://smed7lwjx42w"]
+
+[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="1_fat6l"]
+[ext_resource type="Script" path="res://Player/strzelba.gd" id="1_qo176"]
+[ext_resource type="Script" path="res://Player/statystki_broni.gd" id="2_p54pk"]
+
+[sub_resource type="Resource" id="Resource_i5gmg"]
+script = ExtResource("2_p54pk")
+"obrażenia" = 20
+"czas_przeładowania" = 2.0
+magazynek = 25
+"ilość_naboji_na_pocisk" = 5
+speed = 400
+
+[node name="Strzelba" type="Node2D"]
+z_index = 1
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_qo176")
+stats = SubResource("Resource_i5gmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15.25, 1)
+scale = Vector2(1.02734, 0.234375)
+texture = ExtResource("1_fat6l")
+
+[node name="miejsce spawnu pocisku" type="Node2D" parent="."]
+position = Vector2(83, 0)
