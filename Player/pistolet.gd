@@ -19,7 +19,7 @@ func _process(delta):
 	przeładowanie -= delta
 	
 	if Input.is_action_just_pressed("strzał") and przeładowanie <= 0:
-		przeładowanie = 1
+		przeładowanie = 0.5
 		
 		var bullet_in = bullet.instantiate()
 		bullet_in.position = $"miejsce spawnu pocisku".position
