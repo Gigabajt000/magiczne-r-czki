@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqr8dxfceq07d"]
+[gd_scene load_steps=15 format=3 uid="uid://bqr8dxfceq07d"]
 
 [ext_resource type="PackedScene" uid="uid://cpmnhliqggtdh" path="res://Player/Player.tscn" id="1_ajl52"]
 [ext_resource type="Script" path="res://World/main.gd" id="1_v1xrh"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvaomg8n4bwmc" path="res://Tile_Map/sklepik.tscn" id="7_ycmr2"]
 [ext_resource type="PackedScene" uid="uid://dtbp1ybitey7m" path="res://Tile_Map/powrót_z_sklepu.tscn" id="8_pgsm2"]
 [ext_resource type="PackedScene" uid="uid://bkoide0alof7k" path="res://UI/death_screen.tscn" id="8_skmhe"]
+[ext_resource type="PackedScene" uid="uid://c3xeccm58wv16" path="res://UI/pause_menu.tscn" id="9_8uco7"]
 [ext_resource type="PackedScene" uid="uid://dr2c7au5h4oxa" path="res://Enemy/spawner.tscn" id="12_dgxum"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sksv0"]
@@ -46,6 +47,8 @@ grow_vertical = 1
 [node name="Czas Rundy" parent="CanvasLayer" instance=ExtResource("7_7oyv0")]
 
 [node name="Death_Screen" parent="CanvasLayer" instance=ExtResource("8_skmhe")]
+
+[node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("9_8uco7")]
 
 [node name="Tilemap" parent="." instance=ExtResource("4_w4ma6")]
 position = Vector2(-3100, -562)

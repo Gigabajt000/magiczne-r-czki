@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://baixkgkiett76"]
 
 [ext_resource type="Script" path="res://Player/pistolet.gd" id="1_6wicv"]
-[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="1_n4dk1"]
 [ext_resource type="Script" path="res://Player/statystki_broni.gd" id="2_0nx0r"]
+[ext_resource type="Texture2D" uid="uid://m1ltma4tee7w" path="res://Player/pistol-png-11553973866c8squbw4en-removebg-preview.png" id="3_o3i2d"]
 
 [sub_resource type="Resource" id="Resource_pn2xu"]
 script = ExtResource("2_0nx0r")
@@ -19,9 +19,9 @@ script = ExtResource("1_6wicv")
 stats = SubResource("Resource_pn2xu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(6.75012, 1)
-scale = Vector2(0.894529, 0.234375)
-texture = ExtResource("1_n4dk1")
+position = Vector2(10, 0)
+scale = Vector2(0.152075, 0.152075)
+texture = ExtResource("3_o3i2d")
 
 [node name="miejsce spawnu pocisku" type="Node2D" parent="."]
-position = Vector2(64, 0)
+position = Vector2(50, -20)

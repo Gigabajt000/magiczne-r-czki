@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://canqwytk5bdx4"]
 
 [ext_resource type="Script" path="res://Player/pistolet_maszynowy.gd" id="1_ejvtj"]
-[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="1_epwg1"]
 [ext_resource type="Script" path="res://Player/statystki_broni.gd" id="2_hcgx4"]
+[ext_resource type="Texture2D" uid="uid://cxkoh4311g3f8" path="res://Player/png-clipart-cz-scorpion-evo-3-firearm-submachine-gun-Škorpion-pistol-weapon-assault-rifle-handgun-removebg-preview.png" id="3_7360m"]
 
 [sub_resource type="Resource" id="Resource_tchdg"]
 script = ExtResource("2_hcgx4")
@@ -19,9 +19,10 @@ script = ExtResource("1_ejvtj")
 stats = SubResource("Resource_tchdg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(15.25, 2.38419e-07)
-scale = Vector2(1.02734, 0.140625)
-texture = ExtResource("1_epwg1")
+position = Vector2(10, 0)
+scale = Vector2(0.254768, 0.254768)
+texture = ExtResource("3_7360m")
+flip_h = true
 
 [node name="miejsce spawnu pocisku" type="Node2D" parent="."]
-position = Vector2(83, 0)
+position = Vector2(95, -15)

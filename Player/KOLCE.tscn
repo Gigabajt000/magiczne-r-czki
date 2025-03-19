@@ -1,25 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfv8p4jgeag2w"]
 
 [ext_resource type="Script" path="res://Player/KOLCE.gd" id="1_4o0k4"]
-[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="2_uhr6f"]
+[ext_resource type="Texture2D" uid="uid://8dm3n7jcp86p" path="res://Art/z neta/Traps/Spikes/Idle.png" id="2_rsor5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56j74"]
-size = Vector2(3.29714, 2.25714)
+size = Vector2(3.29714, 1.87143)
 
 [node name="Kolce" type="Node2D"]
 script = ExtResource("1_4o0k4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.999994, 0)
-scale = Vector2(0.248047, 0.143104)
-texture = ExtResource("2_uhr6f")
+texture_filter = 1
+position = Vector2(1.19209e-07, 0.576919)
+scale = Vector2(1.375, 0.793269)
+texture = ExtResource("2_rsor5")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-9.09495e-13, -18.5096)
 scale = Vector2(6.73077, 6.73077)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 2.75)
+position = Vector2(0, 2.94286)
 shape = SubResource("RectangleShape2D_56j74")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

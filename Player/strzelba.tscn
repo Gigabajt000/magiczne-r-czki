@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://smed7lwjx42w"]
 
-[ext_resource type="Texture2D" uid="uid://cfx6i5ah8a3a5" path="res://Art/icon.svg" id="1_fat6l"]
 [ext_resource type="Script" path="res://Player/strzelba.gd" id="1_qo176"]
 [ext_resource type="Script" path="res://Player/statystki_broni.gd" id="2_p54pk"]
+[ext_resource type="Texture2D" uid="uid://d20b7ckw6gcbg" path="res://Player/png-clipart-shotgun-rifle-beretta-hunting-benelli-armi-spa-weapon-sport-ammunition-removebg-preview (1).png" id="3_new8n"]
 
 [sub_resource type="Resource" id="Resource_i5gmg"]
 script = ExtResource("2_p54pk")
@@ -19,9 +19,9 @@ script = ExtResource("1_qo176")
 stats = SubResource("Resource_i5gmg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(15.25, 1)
-scale = Vector2(1.02734, 0.234375)
-texture = ExtResource("1_fat6l")
+position = Vector2(5, 4.99998)
+scale = Vector2(0.255319, 0.255319)
+texture = ExtResource("3_new8n")
 
 [node name="miejsce spawnu pocisku" type="Node2D" parent="."]
-position = Vector2(83, 0)
+position = Vector2(115, -5)
